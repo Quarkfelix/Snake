@@ -35,6 +35,7 @@ public class GameField extends Thread {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			//snake collisioncheck
 			if(!borderCollision() && !snakeCollision()) {
 				snake.move();
 			} else {
@@ -48,6 +49,7 @@ public class GameField extends Thread {
 					InformationPanel.incHighScore();
 				}
 			}
+			//at end of move active brain sets new movementdirrection for next move
 			if(MyWindow.brain != null) {
 				MyWindow.brain.setMovement();
 			}
